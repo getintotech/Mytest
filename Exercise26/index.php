@@ -31,12 +31,16 @@ class Employee
     {
         $time = new DateTime($this->dob);
         $date1 = getdate();
-        
         $diff = $time->diff($date1)->format("%a");
+        if ($diff > 365)
+        {
+            echo "Congratulations ". $this->name ." Ur retired";
+        }  
     }
 }
 
 $Revathy = new Employee("Revathy", "Berberishouse", new DateTime("1980-08-02"));
 
 $Revathy->CheckEmployeeOverAYear();
+$Revathy->EmployeeRetirement();
 ?>
