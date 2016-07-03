@@ -32,7 +32,7 @@ class Employee
         $time = new DateTime($this->dob);
         $date1 = getdate();
         $diff = $time->diff($date1)->format("%a");
-        if ($diff > 365)
+        if ($diff > 8000)
         {
             echo "Congratulations ". $this->name ." Ur retired";
         }  
